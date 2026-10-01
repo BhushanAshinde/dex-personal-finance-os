@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     smtp_username: str | None = None
     smtp_password: str | None = None
     password_reset_ttl_minutes: int = 30
+    cors_origins: str = "http://localhost:3000"
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()
